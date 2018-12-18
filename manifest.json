@@ -1,0 +1,15 @@
+{
+  "name": "GPA Buddy",
+  "short_name": "GPA Buddy",
+  "icons": [
+    {
+      "src": "./img/calculator.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#3F6AE6",
+  "theme_color": "#3F6AE6"
+}

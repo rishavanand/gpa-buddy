@@ -1,0 +1,185 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F8f8f8;
+}
+
+.header {
+    height: 250px;
+    position: fixed;
+    background-color: #3F6AE6;
+    width: 100%;
+    color: white;
+}
+
+.card {
+    height: 100px;
+    cursor: pointer;
+}
+
+.card h6 {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.flex-container {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-extra-title {
+    font-size: 12px;
+    color: #636e72;
+}
+
+.dark-bg {
+    background-color: #3F6AE6 !important;
+    color: white !important;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.95);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.header-message {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-button {
+    position: fixed;
+    z-index: 2;
+    color: white;
+    padding: 15px;
+    z-index: 5;
+}
+
+.menu-card-left {
+    width: 20%;
+    text-align: center;
+}
+
+.menu-card-middle {
+    width: 70%;
+    padding-left: 5%;
+}
+
+.menu-card-right {
+    width: 10%;
+    text-align: right;
+}
+
+/* SNACKBAR SECTION */
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#update-message {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    width: 100%;
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    bottom: 0; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#update-message.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 0; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 0; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 0; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

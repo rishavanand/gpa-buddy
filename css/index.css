@@ -1,0 +1,70 @@
+.header {
+    height: 250px;
+    position: fixed;
+    background-color: #3F6AE6;
+    width: 100%;
+    color: white;
+}
+
+.header-message {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.social-icons{
+    margin-right: 5px;
+}
+
+.install-btn button{
+    color: white;
+    border: solid 1px;
+    background-color: transparent;
+    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.nav-icon-container{
+    position: fixed; 
+    z-index: 2; 
+    color: white; 
+    padding: 15px; 
+    z-index: 1;
+}
+
+.install-btn button:hover{
+    color: #3F6AE6;
+    background-color: white;
+}
+
+.card-container{
+    padding-top: 200px;
+}
+
+.card-icon{
+    width: 20%; text-align: center;
+}
+
+.card-icon img{
+    height: 40px;
+}
+
+.card-text{
+    width: 80%; padding-left: 5%;
+}
+
+.card-arrow{
+    width: 10%; text-align: right;
+}
+
+.card-arrow img{
+    height: 15px;
+}

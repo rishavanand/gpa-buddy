@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="GPA Calculator for Sikkim Manipal Institute of Technology.">
+	<meta name="keywords" content="gpacalculator,gpa,smit,sikkim,manipal,calculator">
+	<meta name="author" content="Rishav Anand">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<meta name="theme-color" content="#3F6AE6">
+	<title>GPA Calculator</title>
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-iphone.png" />
+	<link rel="apple-touch-icon" href="img/apple-touch-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-iphone4.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-ipad-retina.png" />
+	<link rel="icon" sizes="512x512" href="img/calculator.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/mont.css" rel="stylesheet">
+	<link rel="manifest" href="manifest.json">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+	<!-- OVERLAY SIDEBAR -->
+	<div id="mySidenav" class="sidenav">
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">Source code</a>
+		<a href="#" onclick="closeNav()">Close</a>
+	</div>
+	<!-- SIDEBAR HAMBURGER BUTTON -->
+	<span onclick="openNav()" class="nav-icon-container">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</span>
+	<!-- HEADER -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="header-message">
+					<h4><b>GPA Buddy</b><div class="install-btn"><button class="btn" data-toggle="modal" data-target="#installModal">INSTALL</button></div></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CARDS -->
+	<div class="container card-container">
+		<div class="row">
+			<div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0">
+				<div class="card shadow-sm">
+					<div class="card-body">
+						<div class="flex-container" onclick="gotoPage('viewer.html')">
+							<div class="card-icon">
+								<img src="img/calculator.png">
+							</div>
+							<div class="card-text">
+								<h6>Viewer</h6>
+								<div class="card-extra-title">Check your calculated GPA</div>
+							</div>
+							<div class="card-arrow">
+								<img src="img/right-arrow.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card shadow-sm mt-2">
+					<div class="card-body">
+						<div class="flex-container" onclick="gotoPage('estimator.html')">
+							<div class="card-icon">
+								<img src="img/analytics.png">
+							</div>
+							<div class="card-text">
+								<h6>Estimator</h6>
+								<div class="card-extra-title">Estimate your GPA</div>
+							</div>
+							<div class="card-arrow">
+								<img src="img/right-arrow.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card shadow-sm mt-2" onclick="gotoPage('developers.html')">
+					<div class="card-body">
+						<div class="flex-container">
+							<div class="card-icon">
+								<img src="img/programmer.png">
+							</div>
+							<div class="card-text">
+								<h6>Developers</h6>
+								<div class="card-extra-title">Get to know them</div>
+							</div>
+							<div class="card-arrow">
+								<img src="img/right-arrow.png" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Update message -->
+	<div id="update-message">App updated. Open again.</div>
+	<!-- Install Popup Modal -->
+	<div id="installModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Install this App</h4>
+				</div>
+				<div class="modal-body">
+					<p>GPA Buddy can now be installed as an app by the power of PWAs.</p>
+					<h5>For Android</h5>
+					<ol>
+						<l1>1. Open Chrome Browser</l1><br>
+						<l1>2. Goto <a href="https://gpa.rishavanand.com">gpa.rishavanand.com</a></l1><br>
+						<l1>3. Tap on <img src="img/three-dots.png"> icon.</l1><br>
+						<l1>4. Choose Add to Home Screen</l1><br>
+						<l1>5. Wait for it to install</l1><br>
+					</ol>
+					<h5>For iOS</h5>
+					<ol>
+						<l1>1. Open Safari Browser</l1><br>
+						<l1>2. Goto <a href="https://gpa.rishavanand.com">gpa.rishavanand.com</a></l1><br>
+						<l1>3. Tap on <img src="img/safari-action.png"> icon.</l1><br>
+						<l1>4. Choose Add to Home Screen</l1><br>
+						<l1>5. Wait for it to install</l1><br>
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
+    <script>
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag() { dataLayer.push(arguments); }
+	    gtag('js', new Date());
+	    gtag('config', 'UA-116549528-1');
+    </script>
+</body>
+</html>

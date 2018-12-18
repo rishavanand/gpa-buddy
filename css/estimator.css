@@ -1,0 +1,54 @@
+.header {
+    height: 150px;
+    position: fixed;
+    background-color: #3F6AE6;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.header-message {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header-message-container{
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+.estimator-container{
+    padding-top: 175px;
+    z-index: -1;
+}
+
+.gpa-header-display{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.subject-label{
+    font-size: 12px;
+}
+
+.subject-name{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subjects{
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+.subjects select{
+    display: inline; 
+    width: 50%;
+    float: right;
+    text-align: center;
+    text-align-last: center;
+}

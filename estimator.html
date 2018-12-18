@@ -1,0 +1,200 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="GPA Calculator for Sikkim Manipal Institute of Technology.">
+    <meta name="keywords" content="gpacalculator,gpa,smit,sikkim,manipal,calculator">
+    <meta name="author" content="Rishav Anand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="#3F6AE6">
+    <title>GPA Calculator</title>
+    <link rel="icon" sizes="512x512" href="img/calculator.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/mont.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/estimator.css" rel="stylesheet">
+</head>
+<body>
+    <!-- SIDEBAR BUTTON -->
+    <span onclick="goBack()" class="sidebar-button">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </span>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="header-message">
+                    <h6><b>Estimator</b></h6>
+                </div>
+                <div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0 header-message-container">
+                    <div class="header-message">
+                        <div class="gpa-header-display" id="gpa-header-display">0.00</div>
+                    </div>
+                    <div class="header-message" id="gpa-message">
+                        Estimated GPA
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INPUTS -->
+    <div class="container estimator-container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0">
+                <div class="subjects">
+                    <span class="subject-name">Theory 1 </span>
+                    <select class="form-control form-control-sm" id="theory1" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Theory 2 </span>
+                    <select class="form-control form-control-sm" id="theory2" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Theory 3 </span>
+                    <select class="form-control form-control-sm" id="theory3" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Theory 4 </span>
+                    <select class="form-control form-control-sm" id="theory4" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Theory 5 </span>
+                    <select class="form-control form-control-sm" id="theory5" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Theory 6 </span>
+                    <select class="form-control form-control-sm" id="theory6" credit="4">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Lab 1 </span>
+                    <select class="form-control form-control-sm" id="lab1" credit="1.5">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Lab 2</span>
+                    <select class="form-control form-control-sm" id="lab2" credit="1.5">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Lab 3 </span>
+                    <select class="form-control form-control-sm" id="lab3" credit="1.5">
+                        <option value="-1">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/estimator.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-116549528-1');
+    </script>
+</body>
+</html>

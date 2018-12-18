@@ -1,0 +1,68 @@
+.header {
+    height: 50px;
+    position: fixed;
+    background-color: #3F6AE6;
+    width: 100%;
+    color: white;
+}
+
+.header-message {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header-message-container{
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+.website{
+    font-size: 12px;
+}
+
+.developer-container{
+    padding-top: 65px;
+}
+
+.developer-card-spacing{
+    margin-top: 10px;
+}
+
+.card-body{
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container{
+    height: 100px;
+}
+
+.developer-image{
+    height: 80%;
+    border-radius: 5px;
+}
+
+.developer-details{
+    text-align: center;
+    width: 100%;
+}
+
+.developer-pic{
+    padding: 0;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.social-icons{
+    margin-left: 3.5px;
+    margin-right: 3.5px;
+}
+
+.flex-container {
+    justify-content: left;
+    align-items: center;
+}
