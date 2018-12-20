@@ -1,4 +1,4 @@
-var CACHE_NAME = 'v01';
+var CACHE_NAME = 'v02';
 
 var filesToCache = [
     './',
