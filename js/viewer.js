@@ -32,7 +32,7 @@ var calculate = () => {
 			})
 			.catch((err) => {
 				console.log(err);
-				alert('Registration number not found');
+				alert('Registration number not found. Try clearing cache or using incognito window if this error persists.');
 			})
 
 	} else {
@@ -80,7 +80,7 @@ var updateTable = (regNo) => {
 		markup = '';
 
 		if (!singleResult) {
-			return reject('Registration number not found');
+			return reject('Registration number not found. Try clearing cache or using incognito window if this error persists.');
 		}
 		subs = Object.keys(singleResult);
 		createMarkup(markup, singleResult, subs, 0)
