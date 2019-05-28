@@ -1,6 +1,7 @@
 var allData = []
 var singleResult = {}
 var activationList = {}
+var studentInfo = {}
 var regNo;
 var examId;
 
@@ -85,6 +86,8 @@ var updateTable = (regNo) => {
 		subs = Object.keys(singleResult);
 		createMarkup(markup, singleResult, subs, 0)
 			.then((markup) => {
+				// Show student info
+				showStudentInfo(regNo);
 				// Clear table
 				$('#subject-table tbody').html('');
 				// Update table
@@ -98,6 +101,38 @@ var updateTable = (regNo) => {
 			});
 
 	});
+}
+
+// Show student info
+
+var showStudentInfo = async (regNo) => {
+
+	$.getJSON('results/studentInfo.json')
+			.then((res) => {
+				if(res[regNo]){
+					// Update
+					$('#student-name').html(res[regNo].name);
+					$('#student-course').html(res[regNo].prog)
+					// Show
+					$('.student-info-container').show();
+					$('#student-info').addClass('first-container');
+					$('#result').addClass('second-container');
+					$('.grade-container').removeClass('first-container');
+				}else{
+					// Hide
+					$('.student-info-container').hide();
+					$('#result').addClass('first-container');
+					$('#student-info').addClass('second-container');
+					$('.student-info-container').removeClass('first-container');
+				}
+			})
+			.catch((err) => {
+				// Hide
+
+
+				return reject(err);
+			})
+
 }
 
 // Activate / disable  subjects while calculating gpa

@@ -1,4 +1,4 @@
-var CACHE_NAME = "v08";
+var CACHE_NAME = "v09";
 
 var filesToCache = [
   "./",
@@ -51,6 +51,7 @@ var filesToCache = [
   "./results/35.json",
   "./results/41.json",
   "./results/45.json",
+  "./results/studentInfo.json",
   "./manifest.json"
 ];
 

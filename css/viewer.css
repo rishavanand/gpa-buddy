@@ -48,8 +48,22 @@
 
 .grade-container{
 	z-index: -1;
-	padding-top: 225px;
 	display: none;
+}
+
+.first-container{
+	padding-top: 225px;
+}
+
+.second-container{
+	padding-top: 15px;
+}
+
+.student-info-container{
+
+	z-index: -1;
+	display: none;
+
 }
 
 .card-body td{
@@ -59,6 +73,16 @@
 .subject-title{
 	font-size: 13px;
 	font-weight: bold;
+}
+
+.student-info-table{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.student-info-table td{
+	padding: 0;
 }
 
 .subject-code{
