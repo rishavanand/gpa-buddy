@@ -15,8 +15,11 @@ $("#calculate-button").click(function () {
 	calculate();
 });
 
-var calculate = () => {
+var calculate = async () => {
+
 	regNo = $("#registration-number").val();
+	regNo = await getRegNo(regNo);
+
 	examId = $("#exam-id option:selected").val();
 
 	if (regNo && examId != "non") {
@@ -33,12 +36,44 @@ var calculate = () => {
 			})
 			.catch((err) => {
 				console.log(err);
-				alert('Registration number not found. Try clearing cache or using incognito window if this error persists.');
+				alert('Registration number or name not found. Try clearing cache or using incognito window if this error persists.');
 			})
 
 	} else {
 		alert('Please fill the form')
 	}
+}
+
+// Function to get reg no from name if given
+
+var getRegNo = async (input) => {
+
+	return new Promise((resolve, reject) => {
+
+		$.getJSON('results/studentInfo.json')
+		.then((res) => {
+			if(input in res){
+				return resolve(input);
+			}else{
+				var keys = Object.keys(res);
+				for(var i=0;i<keys.length;i++){
+					var name = res[keys[i]].name;
+					input = input.toLowerCase();
+					if(name.toLowerCase().includes(input)){
+						return resolve(keys[i]);
+					}
+				}
+				//return resolve(input);
+			}
+		})
+		.catch((err) => {
+			// Hide
+			return reject(err);
+		})
+
+	});
+
+
 }
 
 // Fetch result from json file
@@ -81,7 +116,7 @@ var updateTable = (regNo) => {
 		markup = '';
 
 		if (!singleResult) {
-			return reject('Registration number not found. Try clearing cache or using incognito window if this error persists.');
+			return reject('Registration number or name not found. Try clearing cache or using incognito window if this error persists.');
 		}
 		subs = Object.keys(singleResult);
 		createMarkup(markup, singleResult, subs, 0)
@@ -108,30 +143,30 @@ var updateTable = (regNo) => {
 var showStudentInfo = async (regNo) => {
 
 	$.getJSON('results/studentInfo.json')
-			.then((res) => {
-				if(res[regNo]){
-					// Update
-					$('#student-name').html(res[regNo].name);
-					$('#student-course').html(res[regNo].prog)
-					// Show
-					$('.student-info-container').show();
-					$('#student-info').addClass('first-container');
-					$('#result').addClass('second-container');
-					$('.grade-container').removeClass('first-container');
-				}else{
-					// Hide
-					$('.student-info-container').hide();
-					$('#result').addClass('first-container');
-					$('#student-info').addClass('second-container');
-					$('.student-info-container').removeClass('first-container');
-				}
-			})
-			.catch((err) => {
+		.then((res) => {
+			if (res[regNo]) {
+				// Update
+				$('#student-name').html(`${res[regNo].name} (${[regNo]})`);
+				$('#student-course').html(res[regNo].prog)
+				// Show
+				$('.student-info-container').show();
+				$('#student-info').addClass('first-container');
+				$('#result').addClass('second-container');
+				$('.grade-container').removeClass('first-container');
+			} else {
 				// Hide
+				$('.student-info-container').hide();
+				$('#result').addClass('first-container');
+				$('#student-info').addClass('second-container');
+				$('.student-info-container').removeClass('first-container');
+			}
+		})
+		.catch((err) => {
+			// Hide
 
 
-				return reject(err);
-			})
+			return reject(err);
+		})
 
 }
 
@@ -175,19 +210,19 @@ var createMarkup = (markup, result, subs, counter) => {
 		if (counter < subs.length) {
 			var subjectId = subs[counter];
 			var subjectGrade = result[subs[counter]];
-			
+
 			if (!key.includes('_INT') && !key.includes('_EXT') && !key.includes('_TOT')) {
-	
+
 				var subjectName = allData['subjects'][subs[counter]]['name'];
 				var internalMarks = result[subs[counter] + '_INT'];
-				var externalMarks = result[subs[counter]  + '_EXT'];
+				var externalMarks = result[subs[counter] + '_EXT'];
 				var totalMarks = result[subs[counter] + '_TOT'];
 
-				if(internalMarks && externalMarks && totalMarks){
+				if (internalMarks && externalMarks && totalMarks) {
 					var marks = `<span class="badge badge-secondary marks-badge">I: ${internalMarks}</span> \
 					<span class="badge badge-secondary marks-badge">E: ${externalMarks}</span> \
 					<span class="badge badge-secondary marks-badge">T: ${totalMarks}</span>`;
-				}else{
+				} else {
 					marks = '';
 				}
 
