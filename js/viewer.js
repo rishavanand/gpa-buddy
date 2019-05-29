@@ -4,6 +4,8 @@ var activationList = {}
 var studentInfo = {}
 var regNo;
 var examId;
+var altRegs = [];
+var currentIndex;
 
 $('#registration-number').keypress("keypress", function (e) {
 	if (e.which == 13) {
@@ -15,10 +17,34 @@ $("#calculate-button").click(function () {
 	calculate();
 });
 
-var calculate = async () => {
+$('#arrow-left').click(() => {
+	if(currentIndex == 0){
+		currentIndex = altRegs.length - 1;
+	}else{
+		currentIndex = currentIndex - 1;
+	}
+	regNo = altRegs[currentIndex];
+	calculate(altRegs[currentIndex]);
+});
 
-	regNo = $("#registration-number").val();
-	regNo = await getRegNo(regNo);
+$('#arrow-right').click(() => {
+	if(currentIndex == altRegs.length - 1){
+		currentIndex = 0;
+	}else{
+		currentIndex = currentIndex + 1;
+	}
+	regNo = altRegs[currentIndex];
+	calculate(altRegs[currentIndex]);
+});
+
+var calculate = async (forcedReg) => {
+
+	if(!forcedReg){
+		regNo = $("#registration-number").val();
+		regNo = await getRegNo(regNo);
+	}else{
+		regNo = forcedReg;
+	}
 
 	examId = $("#exam-id option:selected").val();
 
@@ -27,6 +53,9 @@ var calculate = async () => {
 		getResult(examId)
 			.then(() => {
 				return updateTable(regNo);
+			})
+			.then(() => {
+				showArrows();
 			})
 			.then(() => {
 				return calculateGpa(regNo);
@@ -44,26 +73,41 @@ var calculate = async () => {
 	}
 }
 
+// Function for arrow operation
+
+var showArrows = () => {
+	if(altRegs.length > 1){
+		$('.change-arrows').show();
+	}else{
+		$('.change-arrows').hide();
+	}
+}
+
 // Function to get reg no from name if given
 
 var getRegNo = async (input) => {
 
 	return new Promise((resolve, reject) => {
 
+		var returnData = input;
+
 		$.getJSON('results/studentInfo.json')
 		.then((res) => {
 			if(input in res){
 				return resolve(input);
 			}else{
+				altRegs = [];
 				var keys = Object.keys(res);
 				for(var i=0;i<keys.length;i++){
-					var name = res[keys[i]].name;
+					var name = res[keys[i]].name.toLowerCase();
 					input = input.toLowerCase();
-					if(name.toLowerCase().includes(input)){
-						return resolve(keys[i]);
+					if(name.includes(input)){
+						returnData = keys[i];
+						altRegs.push(keys[i]);
 					}
 				}
-				return resolve(input);
+				currentIndex = altRegs.length - 1;
+				return resolve(returnData);
 			}
 		})
 		.catch((err) => {
