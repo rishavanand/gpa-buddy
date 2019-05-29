@@ -1,4 +1,4 @@
-var CACHE_NAME = "v13";
+var CACHE_NAME = "v14";
 
 var filesToCache = [
   "./",
@@ -23,7 +23,7 @@ var filesToCache = [
   "./js/popper.min.js",
   "./js/TweenLite.min.js",
   "./js/index.js",
-  "./js/viewer5.js",
+  "./js/viewer.js",
   "./js/estimator.js",
   "./js/developer.js",
   "./img/analytics.png",

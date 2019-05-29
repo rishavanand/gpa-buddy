@@ -63,7 +63,7 @@ var getRegNo = async (input) => {
 						return resolve(keys[i]);
 					}
 				}
-				//return resolve(input);
+				return resolve(input);
 			}
 		})
 		.catch((err) => {
