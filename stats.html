@@ -14,7 +14,8 @@
 	<link rel="manifest" href="manifest.json" />
 	<link href="css/font-awesome.min.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
-	<link href="css/viewer.css" rel="stylesheet" />
+	<link href="css/stats.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-message">
-					<h6><b>Viewer</b></h6>
+					<h6><b>Statistics</b></h6>
 				</div>
 				<div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0 header-message-container">
 					<div class="header-message">
@@ -42,11 +43,11 @@
 						</select>
 					</div>
 					<div class="header-message">
-						<input id="registration-number" class="form-control form-control-sm" 
-							placeholder="Enter name or registration number" />
+						<select id="subject-code" class="form-control form-control-sm">
+						</select>
 					</div>
 					<div class="header-message">
-						<button id="calculate-button" class="btn btn-sm btn-success">
+						<button id="submit-button" class="btn btn-sm btn-success">
 							SUBMIT
 						</button>
 					</div>
@@ -54,42 +55,33 @@
 			</div>
 		</div>
 	</div>
-	<!-- STUDENT INFO CARD -->
-	<div class="container student-info-container" id="student-info">
+	<!-- STATS -->
+	<div class="container stats-container first-container" id="stats">
 		<div class="row">
 			<div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0">
 				<div class="card shadow-sm">
 					<div class="card-body">
-						<table class="table student-info-table">
-							<tr>
-								<td rowspan="2" class="change-arrows mid-align" id="arrow-left">
-									<span class="badge badge-secondary marks-badge">PREV</span>
-								</td>
-								<td id="student-name"></td>
-								<td rowspan="2" class="change-arrows" id="arrow-right">
-									<span class="badge badge-secondary marks-badge">NEXT</span>
-								</td>
-							</tr>
-							<tr>
-								<td id="student-course"></td>
-							</tr>
-						</table>
+						<canvas id="myChart" width="400" height="400"></canvas>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- RESULT CARD -->
-	<div class="container grade-container" id="result">
+	<!-- STATS DATA -->
+	<div class="container stats-container second-container" id="stats-data">
 		<div class="row">
 			<div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0">
 				<div class="card shadow-sm">
 					<div class="card-body">
-						<table id="subject-table" class="table table-striped">
-							<tbody></tbody>
+						<table class="table table-striped stats-data-table" id="stats-data-table">
+							<thead>
+								<td>Grades</td>
+								<td>Count</td>
+							</thead>
+							<tbody>
+							</tbody>
 						</table>
 					</div>
-					<div class="gpa-row" id="show-gpa"></div>
 				</div>
 			</div>
 		</div>
@@ -98,7 +90,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/viewer.js"></script>
+	<script src="js/stats.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
 	<script>

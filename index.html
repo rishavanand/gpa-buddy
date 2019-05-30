@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="GPA Calculator for Sikkim Manipal Institute of Technology.">
@@ -20,6 +21,7 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 </head>
+
 <body>
 	<!-- OVERLAY SIDEBAR -->
 	<div id="mySidenav" class="sidenav">
@@ -36,7 +38,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-message">
-					<h4><b>GPA Buddy</b><div class="install-btn"><button class="btn" data-toggle="modal" data-target="#installModal">INSTALL</button></div></h4>
+					<h4><b>GPA Buddy</b>
+						<div class="install-btn"><button class="btn" data-toggle="modal"
+								data-target="#installModal">INSTALL</button></div>
+					</h4>
 				</div>
 			</div>
 		</div>
@@ -54,6 +59,22 @@
 							<div class="card-text">
 								<h6>Viewer <span class="badge badge-secondary">New</span></h6>
 								<div class="card-extra-title">Check your calculated GPA</div>
+							</div>
+							<div class="card-arrow">
+								<img src="img/right-arrow.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card shadow-sm mt-2">
+					<div class="card-body">
+						<div class="flex-container" onclick="gotoPage('stats.html')">
+							<div class="card-icon">
+								<img src="img/graph.png">
+							</div>
+							<div class="card-text">
+								<h6>Statistics <span class="badge badge-secondary">New</span></h6>
+								<div class="card-extra-title">Visualize performance</div>
 							</div>
 							<div class="card-arrow">
 								<img src="img/right-arrow.png">
@@ -88,7 +109,7 @@
 								<div class="card-extra-title">Get to know them</div>
 							</div>
 							<div class="card-arrow">
-								<img src="img/right-arrow.png" >
+								<img src="img/right-arrow.png">
 							</div>
 						</div>
 					</div>
@@ -138,12 +159,16 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
-    <script>
-	    window.dataLayer = window.dataLayer || [];
-	    function gtag() { dataLayer.push(arguments); }
-	    gtag('js', new Date());
-	    gtag('config', 'UA-116549528-1');
-    </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-116549528-1');
+	</script>
 </body>
+
 </html>

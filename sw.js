@@ -1,4 +1,4 @@
-var CACHE_NAME = "v16";
+var CACHE_NAME = "v17";
 
 var filesToCache = [
   "./",
@@ -6,6 +6,7 @@ var filesToCache = [
   "./viewer.html",
   "./developers.html",
   "./estimator.html",
+  "./stats.html",
   "./css/developers.css",
   "./css/estimator.css",
   "./css/font-awesome.css",
@@ -13,6 +14,7 @@ var filesToCache = [
   "./css/index.css",
   "./css/style.css",
   "./css/viewer.css",
+  "./css/stats.css",
   "./css/bootstrap.min.css",
   "./css/mont.css",
   "./js/bootstrap.min.js",
@@ -24,10 +26,13 @@ var filesToCache = [
   "./js/TweenLite.min.js",
   "./js/index.js",
   "./js/viewer.js",
+  "./js/stats.js",
   "./js/estimator.js",
   "./js/developer.js",
   "./img/analytics.png",
   "img/calculator.png",
+  "./img/graph.png",
+  "./img/calculator.png",
   "./img/programmer.png",
   "./img/right-arrow.png",
   "./img/rishav.jpg",

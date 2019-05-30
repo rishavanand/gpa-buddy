@@ -41,6 +41,7 @@ var calculate = async (forcedReg) => {
 
 	if(!forcedReg){
 		regNo = $("#registration-number").val();
+		regNo = regNo.trim();
 		regNo = await getRegNo(regNo);
 	}else{
 		regNo = forcedReg;
