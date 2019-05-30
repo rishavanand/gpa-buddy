@@ -1,4 +1,4 @@
-var CACHE_NAME = "v17";
+var CACHE_NAME = "v19";
 
 var filesToCache = [
   "./",
@@ -32,7 +32,6 @@ var filesToCache = [
   "./img/analytics.png",
   "img/calculator.png",
   "./img/graph.png",
-  "./img/calculator.png",
   "./img/programmer.png",
   "./img/right-arrow.png",
   "./img/rishav.jpg",
