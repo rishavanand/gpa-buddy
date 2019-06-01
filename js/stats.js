@@ -78,7 +78,7 @@ var countGrades = (grades) => {
     var count = {};
 
     grades = grades.sort();
-
+    
     for (var i = 0; i < grades.length; i++) {
         var grade = grades[i];
         if (!count[grade]) {
@@ -94,9 +94,9 @@ var countGrades = (grades) => {
     var dGrade = count['D'];
     var eGrade = count['E'];
     var fGrade = count['F'];
-    var gGrade = count['H'];
-    var hGrade = count['I'];
-    var iGrade = count['J'];
+    var gGrade = count['G'];
+    var hGrade = count['H'];
+    var iGrade = count['I'];
     var sGrade = count['S'];
     var mpGrade = count['MP'];
     var dtGrade = count['DT'];
