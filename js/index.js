@@ -29,6 +29,8 @@ var gotoPage = (page) => {
 }
 
 var showUpdate = () => {
+    // Alert user
+    alert('GPA Buddy has been updated. Kindly restart/refresh app to experience the newer version.')
     // Get the snackbar DIV
     var x = document.getElementById("update-message");
     // Add the "show" class to DIV
