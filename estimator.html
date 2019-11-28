@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="description" content="GPA Calculator for Sikkim Manipal Institute of Technology.">
@@ -15,6 +16,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/estimator.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- SIDEBAR BUTTON -->
     <span onclick="goBack()" class="sidebar-button">
@@ -43,9 +45,18 @@
         <div class="row">
             <div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0">
                 <div class="subjects">
-                    <span class="subject-name">Theory 1 </span>
-                    <select class="form-control form-control-sm" id="theory1" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 1 </span>
+                    <select class="form-control form-control-sm credit" id="credit1">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory1">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -58,9 +69,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Theory 2 </span>
-                    <select class="form-control form-control-sm" id="theory2" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 2 </span>
+                    <select class="form-control form-control-sm credit" id="credit2">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory2">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -73,9 +93,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Theory 3 </span>
-                    <select class="form-control form-control-sm" id="theory3" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 3 </span>
+                    <select class="form-control form-control-sm credit" id="credit3">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory3">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -88,9 +117,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Theory 4 </span>
-                    <select class="form-control form-control-sm" id="theory4" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 4 </span>
+                    <select class="form-control form-control-sm credit" id="credit4">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory4">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -103,9 +141,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Theory 5 </span>
-                    <select class="form-control form-control-sm" id="theory5" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 5 </span>
+                    <select class="form-control form-control-sm credit" id="credit5">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory5">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -118,9 +165,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Theory 6 </span>
-                    <select class="form-control form-control-sm" id="theory6" credit="4">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 6 </span>
+                    <select class="form-control form-control-sm credit" id="credit6">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4" selected>4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="theory6">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -133,9 +189,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Lab 1 </span>
-                    <select class="form-control form-control-sm" id="lab1" credit="1.5">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 7 </span>
+                    <select class="form-control form-control-sm credit" id="credit7">
+                        <option value="1">1 credit</option>
+                        <option value="1.5" selected>1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4">4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="lab1">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -148,9 +213,18 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Lab 2</span>
-                    <select class="form-control form-control-sm" id="lab2" credit="1.5">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 8 </span>
+                    <select class="form-control form-control-sm credit" id="credit8">
+                        <option value="1">1 credit</option>
+                        <option value="1.5" selected>1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4">4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="lab2">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -163,9 +237,42 @@
                     </select>
                 </div>
                 <div class="subjects">
-                    <span class="subject-name">Lab 3 </span>
-                    <select class="form-control form-control-sm" id="lab3" credit="1.5">
-                        <option value="-1">Grade</option>
+                    <span class="subject-name">Subject 9 </span>
+                    <select class="form-control form-control-sm credit" id="credit9">
+                        <option value="1">1 credit</option>
+                        <option value="1.5" selected>1.5 credit</option>
+                        <option value="2">2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4">4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="lab3">
+                        <option value="-1">Grade - N/A</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                        <option value="0">I</option>
+                        <option value="0">MP</option>
+                    </select>
+                </div>
+                <div class="subjects">
+                    <span class="subject-name">Subject 10 </span>
+                    <select class="form-control form-control-sm credit" id="credit10">
+                        <option value="1">1 credit</option>
+                        <option value="1.5">1.5 credit</option>
+                        <option value="2" selected>2 credit</option>
+                        <option value="2.5">2.5 credit</option>
+                        <option value="3">3 credit</option>
+                        <option value="3.5">3.5 credit</option>
+                        <option value="4">4 credit</option>
+                    </select>
+                    <select class="form-control form-control-sm grade" id="lab4">
+                        <option value="-1">Grade - N/A</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -192,9 +299,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-116549528-1');
     </script>
 </body>
+
 </html>

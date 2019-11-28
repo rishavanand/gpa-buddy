@@ -46,8 +46,9 @@
 }
 
 .subjects select{
+    margin-left: 5px;
     display: inline; 
-    width: 50%;
+    width: 25%;
     float: right;
     text-align: center;
     text-align-last: center;

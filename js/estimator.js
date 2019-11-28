@@ -2,14 +2,14 @@ var goBack = () => {
     window.history.back();
 }
 
-$('select').on('change', () => {
+const startUpdate = () => {
     var totalCredits = 0.0;
     var totalPoints = 0.0;
-    var selects = document.getElementsByTagName('select');
-    for (var i in [0, 1, 2, 3, 4, 5, 6, 7, 8]) {
-        point = selects[i].options[selects[i].selectedIndex].value;
+    var selects = document.getElementsByClassName('grade');
+    for (let i=0;i<selects.length;i++) {
+        point = selects[i].value;
         if (point != -1) {
-            credit = selects[i].getAttribute('credit');
+            credit = document.getElementById('credit' + (i+1)).value;
             floatedCredit = parseFloat(credit);
             floatedPoint = parseFloat(point);
             totalPoints += (floatedPoint * floatedCredit);
@@ -20,7 +20,10 @@ $('select').on('change', () => {
     roundedGpa = gpa.toFixed(2);
     updateGpa(roundedGpa);
     updateMessage(roundedGpa);
-});
+}
+
+$('.grade').on('change', startUpdate);
+$('.credit').on('change', startUpdate);
 
 var updateGpa = (gpa) => {
     var previousGpa = document.getElementById("gpa-header-display").innerHTML;
